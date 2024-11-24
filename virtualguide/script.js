@@ -1,12 +1,9 @@
-// Initialize the map and set its view to the default coordinates and zoom level
 const map = L.map('map').setView([20.5937, 78.9629], 5); // Center of India
 
-// Add the tile layer to the map (you can customize this as per your requirement)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
 
-// City coordinates and names
 const cities = {
     mumbai: {
         name: 'Mumbai',
@@ -178,14 +175,12 @@ const cities = {
     }
 };
 
-// Add markers for all the main cities when the map loads
 Object.keys(cities).forEach(cityKey => {
     const city = cities[cityKey];
     const cityMarker = L.marker(city.coords).addTo(map);
     cityMarker.bindPopup(`<b>${city.name}</b>`);
 });
 
-// Event listeners for city buttons
 document.getElementById('mumbai-btn').addEventListener('click', () => {
     selectCity('mumbai');
 });
@@ -214,19 +209,16 @@ document.getElementById('shirdi-btn').addEventListener('click', () => {
     selectCity('shirdi');
 });
 
-// Function to handle city selection and zoom to that city
 function selectCity(cityKey) {
     const city = cities[cityKey];
-    map.setView(city.coords, 12); // Zoom in on the city
+    map.setView(city.coords, 12); 
 
-    // Remove all markers from the map before adding new ones
     map.eachLayer(layer => {
         if (layer instanceof L.Marker) {
             map.removeLayer(layer);
         }
     });
 
-    // Add markers for places in the selected city
     city.places.forEach(place => {
         const marker = L.marker(place.coords).addTo(map);
         marker.bindPopup(place.name);
@@ -237,7 +229,6 @@ function selectCity(cityKey) {
         });
     });
 
-    // Toggle local language help button visibility for Hyderabad
     const localLanguageHelpBtn = document.getElementById('local-language-help-btn');
     if (cityKey === 'hyderabad') {
         localLanguageHelpBtn.style.display = 'inline-block';
@@ -246,7 +237,6 @@ function selectCity(cityKey) {
     }
 }
 
-// Function to show details about a place
 function showDetails(place) {
     const placeName = document.getElementById('place-name');
     const placeDescription = document.getElementById('place-description');
@@ -257,11 +247,10 @@ function showDetails(place) {
     placeName.textContent = place.name;
     placeDescription.textContent = place.details;
     placeImage.src = place.image;
-    placeImage.style.display = 'block'; // Show the image
+    placeImage.style.display = 'block'; 
 
-    knowMoreBtn.style.display = 'inline-block'; // Show the "Know More" button
+    knowMoreBtn.style.display = 'inline-block'; 
 
-    // "Know More" button redirects to specific pages for some places
     knowMoreBtn.onclick = function () {
         if (place.name === 'Charminar') {
             window.location.href = '/virtualguide/charminar/index.html';
@@ -272,11 +261,9 @@ function showDetails(place) {
         } 
     };
 
-    // Hide the local language help button unless for Hyderabad
     localLanguageHelpBtn.style.display = 'none';
 }
 
-// Event listener for local language help button
 document.getElementById('local-language-help-btn').addEventListener('click', function() {
     window.location.href = 'local.html'; 
 });
