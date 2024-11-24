@@ -1,0 +1,140 @@
+*⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #555;
+    color: rgba(246, 247, 248, 0.931);
+    padding: 17px;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 545;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  #map {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .info {
+    width: 50%;
+    background-color: #ffffffdb;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.icon-container {
+    position: relative;
+    width: calc(33.33% - 10px); /* Three icons per row with margin */
+    margin-bottom: 10px;
+    text-align: center; /* Center align text */
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.icon-label {
+    display: block;
+    margin-bottom: 5px; /* Space between label and icon */
+    background-color: rgba(0, 0, 0); /* Semi-transparent background */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon-label:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
+    color: #000; /* Change text color on hover */
+}
+
+.icon:hover {
+    transform: scale(1.05); /* Slightly scale the icon on hover */
+}
+
+
+  
+  .planner {
+    flex: 1;
+    background: #f9f8f8;
+    border-left: 2px solid #de917a;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .content-box {
+    background: #c3c1c1;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: background 0.3s;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .content-box:hover {
+    background: #f1f1f1;
+  }
+  
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 10px; 
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  @media (min-width: 600px) {
+    .icon {
+      flex: 1 1 30%; 
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .icon {
+      flex: 1 1 45%; 
+    }
+  }
+  
+  .popup-content {
+    font-family: 'Times New Roman', serif; 
+    font-style: italic; 
+  }

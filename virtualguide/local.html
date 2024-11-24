@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions with Translations</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .question {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .content {
+            flex: 2;
+            display: none;
+            padding-left: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f0f1f0;
+            color: rgb(4, 4, 4);
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Updated Font */
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #d3d5d3;
+        }
+
+        .content p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Useful Language Translations</h1>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content1')">How much is it?</button>
+        </div>
+        <div id="content1" class="content">
+            <p><strong>(TELUGU)</strong> ఇది ఎంత? (Idhi entha?)</p>
+            <p><strong>(HINDI)</strong> यह कितने का है? (Yeh kitne ka hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content2')">Can you reduce the price?</button>
+        </div>
+        <div id="content2" class="content">
+            <p><strong>(TELUGU)</strong> కొంచెం ధర తగ్గిస్తారా? (Konchem dhara thaggisthara?)</p>
+            <p><strong>(HINDI)</strong> क्या आप कीमत कम कर सकते हैं? (Kya aap keemat kam kar sakte hain?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content3')">What is it?</button>
+        </div>
+        <div id="content3" class="content">
+            <p><strong>(TELUGU)</strong> ఇది ఏమిటి? (Idi emiti?)</p>
+            <p><strong>(HINDI)</strong> यह क्या है? (Yeh kya hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content4')">What is it made of?</button>
+        </div>
+        <div id="content4" class="content">
+            <p><strong>(TELUGU)</strong> ఇది దేనితో చేసారు? (Idi denito chesaru?)</p>
+            <p><strong>(HINDI)</strong> यह किस चीज़ से बना है? (Yeh kis cheez se bana hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content5')">Where are this from?</button>
+        </div>
+        <div id="content5" class="content">
+            <p><strong>(TELUGU)</strong> ఇది ఎక్కడి నుంచి వచ్చింది? (Idi ekkadi nunchi vachhindi?)</p>
+            <p><strong>(HINDI)</strong> यह कहाँ से है? (Yeh kahaan se hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content6')">What is the final price?</button>
+        </div>
+        <div id="content6" class="content">
+            <p><strong>(TELUGU)</strong> ఫైనల్ రేటు ఎంత? (final rate entha?)</p>
+            <p><strong>(HINDI)</strong> अंतिम कीमत क्या है? (Antim keemat kya hai?)</p>
+        </div>
+    </div>
+
+     <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content7')">How can I find XJBFUDHF place</button>
+        </div>
+        <div id="content7" class="content">
+            <p><strong>(TELUGU)</strong> XJBFUDHF ఎలా వెళ్ళాలి? (XJBFUDHF ela vellali?)</p>
+            <p><strong>(HINDI)</strong> मैं XJBFUDHF कैसे जा सकता हूँ? (Main XJBFUDHF kaise jaa sakta hoon?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content8')">How to go to metro?</button>
+        </div>
+        <div id="content8" class="content">
+            <p><strong>(TELUGU)</strong> మెట్రోకి ఎలా వెళ్లాలి? (Metroki ela vellali?)</p>
+            <p><strong>(HINDI)</strong> मेट्रो कैसे जाएं? (Metro kaise jaayein?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content9')">Is it available in other sizes/colors?</button>
+        </div>
+        <div id="content9" class="content">
+            <p><strong>(TELUGU)</strong> ఇంకా ఏమైనా సైజులు/రంగులు ఉన్నాయా? (Inka aemaina sizes/rangulu unnaya?)</p>
+            <p><strong>(HINDI)</strong> क्या यह और आकार/रंग में मिल सकता है? (Kya yeh aur aakaar/rang mein mil saktha hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content10')">Where can I go for food nearby?</button>
+        </div>
+        <div id="content10" class="content">
+            <p><strong>(TELUGU)</strong> దగ్గర్లో తిండి ఎక్కడ దొరుకుతుంది? (Deggarló thindi ekkada dorukutadi?)</p>
+            <p><strong>(HINDI)</strong> मैं आस-पास भोजन के लिए कहाँ जा सकता हूँ? (Main aas-paas bhojan ke liye kahaan ja sakata hoon?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content11')">Is there any discount available?</button>
+        </div>
+        <div id="content11" class="content">
+            <p><strong>(TELUGU)</strong> ఏమైనా తగ్గింపు/discount ఉందా? (Aemaina thaggimpu undaa?)</p>
+            <p><strong>(HINDI)</strong> क्या कोई छूट/discount मिल सकता है? (Kya koi chhoot mil saktha hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content12')">For auto (Can you stop here?)</button>
+        </div>
+        <div id="content12" class="content">
+            <p><strong>(TELUGU)</strong> ఆటో (ఇక్కడ ఆగుతారా?) (Auto (Ikkada aguthara?))</p>
+            <p><strong>(HINDI)</strong> ऑटो के लिए (क्या आप यहाँ रोक सकते हैं?) (Auto ke liye (kya aap yahaan rok sakte hain?))</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content13')">Can I get a sample?</button>
+        </div>
+        <div id="content13" class="content">
+            <p><strong>(TELUGU)</strong> నాకు ఒక శాంపిల్ ఇస్తారా? (Naaku oka sample isthara?)</p>
+            <p><strong>(HINDI)</strong> क्या मुझे एक sample मिल सकता है? (Kya mujhe ek sample mil sakta hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content14')">What’s the difference between this and other models?</button>
+        </div>
+        <div id="content14" class="content">
+            <p><strong>(TELUGU)</strong> ఇది మరియు మిగతా మోడల్స్‌లో ఏం తేడా? (Idi mariyu migatha models-lo em teda?)</p>
+            <p><strong>(HINDI)</strong> इसमें और दूसरे मॉडलों में क्या फरक है? (Ismein aur doosare maudlon mein kya pharak hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content15')">Can you gift wrap this?</button>
+        </div>
+        <div id="content15" class="content">
+            <p><strong>(TELUGU)</strong> దీన్ని గిఫ్ట్ ర్యాప్ చేస్తారా? (Deeni gift wrap chesthara?)</p>
+            <p><strong>(HINDI)</strong> क्या आप इस तोहफ़ा को पैक कर सकते हैं? (Kya aap ise tohfa ko pack kar sakte hain?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content16')">Can I get a bag?</button>
+        </div>
+        <div id="content16" class="content">
+            <p><strong>(TELUGU)</strong> ఒక బ్యాగ్ ఇస్తారా? (Oka bag isthara?)</p>
+            <p><strong>(HINDI)</strong> क्या मुझे एक बैग मिल सकता है? (Kya mujhe ek bag mil sakta hai?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content17')">What payment methods do you accept?</button>
+        </div>
+        <div id="content17" class="content">
+            <p><strong>(TELUGU)</strong> మీరు ఎటువంటి పేమెంట్ తీసుకుంటారు? (Meeru etuvanti payment teesukuntaru?)</p>
+            <p><strong>(HINDI)</strong> आप कौन सा पेमेंट लेते हो? (Aap kaun sa payment lete ho?)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <button onclick="toggleContent('content18')">How do I care for this product?</button>
+        </div>
+        <div id="content18" class="content">
+            <p><strong>(TELUGU)</strong> దీన్ని ఎలా చూసుకోవాలి? (Deeni ela choosukovali?)</p>
+            <p><strong>(HINDI)</strong> इसका कैसे देखभाल कर सकते हैं? (Iska kaise dekhbhaal kar sakthe hain?)</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

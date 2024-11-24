@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Virtual Guide</h1>
+    </header>
+
+    <main>
+        <section class="city-selector">
+            <button id="mumbai-btn">Mumbai</button>
+            <button id="hyderabad-btn">Hyderabad</button>
+            <button id="kolkata-btn">Kolkata</button>
+            <!-- New City Buttons -->
+            <button id="varanasi-btn">Varanasi</button>
+            <button id="agra-btn">Agra</button>
+            <button id="kanyakumari-btn">Kanyakumari</button>
+            <button id="jodhpur-btn">Jodhpur</button>
+            <button id="tirupati-btn">Tirupati</button>
+            <button id="shirdi-btn">Shirdi</button>
+        </section>
+
+        <section class="map-details-container">
+            <div class="map-container" id="map"></div>
+            <div class="details" id="details">
+                <h2>Explore a City</h2>
+                <div id="checkpoint-details">
+                    <img id="place-image" src="" alt="Place Image" style="display: none; width: 100%; height: auto;">
+                    <h3 id="place-name"></h3>
+                    <p id="place-description"></p>
+                    <button id="know-more-btn" class="btn" style="display: none;">Know More</button>
+                    <button id="local-language-help-btn" class="btn" style="display: none;">Local Language Help</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 City Explorer</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
