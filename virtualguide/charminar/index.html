@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charminar Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    Charminar Guide
+  </header>
+  <div class="container">
+    <div id="map"></div>
+    <div class="info">
+      <div class="icons">
+        <div class="icon-container" onclick="showInfo('significance')">
+          <span class="icon-label">Significance</span>
+          <img src="/virtualguide/charminar/icons/history.jpg" alt="History" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('architecture')">
+          <span class="icon-label">Architecture</span>
+          <img src="/virtualguide/charminar/icons/architecture.jpeg" alt="Architecture" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('events')">
+          <span class="icon-label">Events Celebrated</span>
+          <img src="/virtualguide/charminar/icons/photo-spots.jpeg" alt="Events" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('food')">
+          <span class="icon-label">Food</span>
+          <img src="/virtualguide/charminar/icons/food.jpg" alt="Food Places" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('shopping')">
+          <span class="icon-label">Shopping</span>
+          <img src="/virtualguide/charminar/icons/shopping.jpg" alt="Shopping" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('dress-code')">
+          <span class="icon-label">Dress Code</span>
+          <img src="/virtualguide/charminar/icons/dress-code.jpg" alt="Dress Code" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('fun-facts')">
+          <span class="icon-label">Fun Facts</span>
+          <img src="/virtualguide/charminar/icons/facts.jpg" alt="Fun Facts" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('best-time')">
+          <span class="icon-label">Timings</span>
+          <img src="/virtualguide/charminar/icons/best-time.jpeg" alt="Best Time to Visit" class="icon" />
+        </div>
+        <div class="icon-container" onclick="showInfo('transport')">
+          <span class="icon-label">Transport</span>
+          <img src="/virtualguide/charminar/icons/transport.png" alt="Transport" class="icon" />
+        </div>
+      </div>
+      <div id="planner" class="planner">
+        <div id="planner-content" class="content-box">
+          <p>Select an icon to view information.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function showInfo(section) {
+      const content = {
+        significance: `
+          <h3>Significance</h3>
+          <h4>Historical</h4>
+          <p>Charminar was built by Sultan Mohammed Quli Qutb Shah in 1591. Its four pillars are believed to symbolize the first four caliphs of Islam. There are various stories surrounding its construction, including one that it was built to mark the end of a plague, as a tribute to Allah. Another suggests it was a dedication to the Sultan's wife, Bhagmati. Some say its design resembles Shia Tazias, commemorating Prophet Muhammad's son-in-law, who was martyred at the Battle of Karbala. The French traveler Jean de Thévenot claimed that Charminar celebrates the start of the second Islamic millennium.</p>
+          <p>There is also a legend about a secret tunnel connecting Charminar to Golconda Fort, although it has never been found.</p>
+
+          <h4>UNESCO Criteria for Adaptation:</h4>
+          <ul>
+            <li><b>Criterion 1:</b> Masterpiece of world architecture with a unique design influencing Deccani architecture.</li>
+            <li><b>Criterion 2:</b> Synthesis of Indic and Persianate cultures; inspired designs in other regions like Bukhara, Uzbekistan.</li>
+            <li><b>Criterion 3:</b> Epitomizes flourishing Deccani art and architecture; protected under national and state regulations.</li>
+          </ul>
+
+          <h4>Preservation Efforts:</h4>
+          <p>Charminar has been declared a monument of national importance, with ongoing restoration efforts. Historic precincts have been established around it, and its southwestern minaret was restored using traditional stucco techniques.</p>
+
+          <h4>Urban Context:</h4>
+          <p>Despite urban encroachment, essential avenues and symbolic gateways have been preserved. Charminar remains a defining feature of Hyderabad's historical layout and retains cultural significance.</p>
+        `,
+        architecture: `
+          <h3>Architectural Details</h3>
+          <p>The Charminar is a square structure, each side measuring 20 meters (66 feet). Its arches on all four sides direct views towards the monument’s central point. Unlike the standalone minarets of the Taj Mahal, Charminar's fluted minarets are uniquely integrated into the structure. The roof features an open space that originally offered panoramic views of Hyderabad, with a mosque situated at the western end.</p>
+          <p>Historically, the roof served as a royal court during the Qutb Shahi period, with the mosque on the fourth floor. Clocks were installed in 1889, facing the four cardinal directions. The central ablution facility, known as the vazu, is still present for worshippers.</p>
+          <p>Charminar is also known as the Arc de Triomphe of the East and is included in UNESCO's tentative list for World Heritage status.</p>
+        `,
+        shopping: "<h3>Shopping</h3><ul><li><b>Laad Bazaar (Choodi Bazaar)</b>: <i>Famous for:</i> A stunning array of bangles. <br><i>What to Buy:</i> Lac bangles, glass bangles, bangles studded with semi-precious stones and pearls.</li><li><b>Pathar Gatti (Stone Market)</b>: <i>Famous for:</i> Pearls at affordable prices. <br><i>What to Buy:</i> Pearl jewellery, silver jewellery, gemstones.</li><li><b>Meena Bazaar</b>: <i>Famous for:</i> Shopping near Charminar. <br><i>What to Buy:</i> Sarees, handcrafted jewellery, footwear, lehengas.</li><li><b>Moti Chowk</b>: <i>Famous for:</i> Dry fruits and spices. <br><i>What to Buy:</i> Almonds, pistachios, cashews, raisins, spices.</li><li><b>Shahran Market (Abayas Market)</b>: <i>Famous for:</i> Traditional clothing. <br><i>What to Buy:</i> Abayas, burqas, sarees, kurtas.</li><li><b>Sultan Bazaar</b>: <i>Famous for:</i> Fabrics and garments. <br><i>What to Buy:</i> Fabrics, ready-made garments, shoes, bags, stationery.</li><li><b>Perfume Market (Between Charminar and Moti Chowk)</b>: <i>Famous for:</i> Non-alcoholic perfumes (Itr). <br><i>What to Buy:</i> Itr, incense sticks (rose, jasmine, sandalwood, oud).</li></ul>",
+        events: `
+          <h3>Events Celebrated</h3>
+          <p>Charminar is a site of numerous festivals such as Eid-ul-Adha and Eid al-Fitr, given its proximity to the Makkah Masjid, the city's main mosque. During these celebrations, the area becomes a hub of activity with devotees and visitors alike, contributing to the rich cultural landscape of Hyderabad.</p>
+        `,
+        food: "<h3>Food Places</h3><ul><li><i>Nimrah Café:</i> Irani chai, Osmania biscuits. TIMINGS: 4AM to 11PM.</li><li><i>Haryana Mithai Ghar:</i> Gulab Jamun, Lacha Kalakanad. TIMINGS: 9:30AM to 9:00PM.</li><li><i>Milan Juice Centre:</i> Shahtoot Malai. TIMINGS: 9AM to 4AM.</li><li><i>Nayaab Hotel:</i> Diverse menu including Hyderabadi dishes. TIMINGS: 4AM to 12AM.</li><li><i>Hotel Shadab:</i> Authentic Hyderabadi biryani, kebabs. TIMINGS: 5AM to 11PM.</li></ul>",
+        "dress-code": `
+          <h3>Dress Code</h3>
+          <p>If visiting Makkah Masjid, adjacent to Charminar, a strict dress code is followed due to its religious significance. Women wearing jeans or western outfits are not allowed inside. Women should dress conservatively, with loose-fitting, long clothing, and cover their hair with a hijab. Men should also wear modest, long-sleeved clothing. For visiting Charminar itself, comfortable clothing and footwear are recommended for walking around the area.</p>
+        `,
+        "fun-facts": `
+          <h3>Fun Facts</h3>
+          <ul>
+            <li>A cat's head is carved on one of Charminar’s arches.</li>
+            <li>A secret underground tunnel is said to link Charminar to Golconda Fort, though it remains undiscovered.</li>
+            <li>The monument features clocks installed in 1889, facing the four cardinal directions.</li>
+            <li>Charminar was built at the intersection of a historic trade route connecting Golconda with the port of Masulipatnam.</li>
+            <li>The spiral staircase inside the minarets has 149 steps leading to the top.</li>
+            <li>Charminar was designed as a mosque and madrasa (Islamic school of learning) and is the oldest multi-storey building in Hyderabad.</li>
+            <li>The monument showcases the peaceful coexistence of different religions in the city.</li>
+            <li>It is over 450 years old, making it one of the oldest monuments in India.</li>
+          </ul>
+        `,
+        "best-time": `
+          <p>The ideal times to visit Charminar are during the cooler months from October to March or during Ramadan nights. To avoid crowds and enjoy the architecture in more comfortable temperatures, it's best to visit early in the morning or late in the afternoon. For the most beautiful views, visit at night when the Charminar is illuminated, especially on national holidays when it is adorned with the Indian flag after sunset.</p>
+        `,
+        transport: `
+          <h3>Transport</h3>
+          <p>Accessible by metro (MGBS Metro, 2-3 km), bus (Charminar Bus Stop), train (Hyderabad Deccan, 4-5 km), and plane (Rajiv Gandhi International Airport, 19 km).</p>
+        `,
+      };
+
+      document.getElementById("planner-content").innerHTML = content[section] || "<p>Select an icon to view information.</p>";
+    }
+  </script>
+</body>
+</html>
